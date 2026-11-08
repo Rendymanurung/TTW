@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "judul": "Malam Keramat H-1 Deadline Proyek Besar",
+    "kategori": "proyek",
+    "tanggal": "Oktober 2024",
+    "deskripsi": "Sepuluh laptop menyala di ruang sekretariat, aroma mie instan dan kopi tubruk menyatu dengan suara ketikan mechanical keyboard.",
+    "tag": "LEVEL: BOSS FIGHT",
+    "pixel_icon": "💻"
+  },
+  {
+    "id": 2,
+    "judul": "Evaluasi Semester di Warkop 24 Jam",
+    "kategori": "nongkrong",
+    "tanggal": "Januari 2025",
+    "deskripsi": "Membahas strategi KRS sambil ngopi dan menghabiskan tiga porsi roti bakar keju.",
+    "tag": "CHECKPOINT",
+    "pixel_icon": "☕"
+  },
+  {
+    "id": 3,
+    "judul": "Kemenangan Hackathon Kampus",
+    "kategori": "proyek",
+    "tanggal": "Mei 2025",
+    "deskripsi": "TTW meraih juara umum setelah 36 jam nonstop coding tanpa tidur, hanya ditenagai semangat pantang remidi.",
+    "tag": "STAGE CLEAR",
+    "pixel_icon": "🏆"
+  },
+  {
+    "id": 4,
+    "judul": "Sesi Mabar Retro Arcade Akhir Pekan",
+    "kategori": "mabar",
+    "tanggal": "Agustus 2025",
+    "deskripsi": "Mengistirahatkan pikiran dengan adu skor di game fighting 90-an dan mesin pinball lokal.",
+    "tag": "BONUS STAGE",
+    "pixel_icon": "🕹️"
+  },
+  {
+    "id": 5,
+    "judul": "Seminar Proposal Bareng Seangkatan",
+    "kategori": "wisuda",
+    "tanggal": "Maret 2026",
+    "deskripsi": "Langkah pertama menuju gerbang kelulusan. Sepuluh judul disetujui tanpa drama revisi total.",
+    "tag": "LEVEL UP",
+    "pixel_icon": "🎓"
+  },
+  {
+    "id": 6,
+    "judul": "Piknik Singkat ke Puncak Gunung",
+    "kategori": "nongkrong",
+    "tanggal": "Juli 2026",
+    "deskripsi": "Menghirup udara segar setelah berbulan-bulan terkurung layar monitor dan tumpukan jurnal ilmiah.",
+    "tag": "REST AREA",
+    "pixel_icon": "⛺"
+  }
+]

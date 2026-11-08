@@ -1,0 +1,427 @@
+/* Base CSS - TTW Retro Arcade
+   Palet, reset, tipografi 8-bit, CRT overlay, dan HUD
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=VT323&display=swap');
+
+:root {
+  --bg-main: #0B0B1E;
+  --bg-panel: #161336;
+  --bg-panel-dark: #0f0d26;
+  --bg-panel-light: #231b52;
+  
+  --accent-coin: #FFD500;
+  --accent-red: #FF3B3B;
+  --accent-cyan: #2DE2E6;
+  --accent-green: #39FF14;
+  --accent-purple: #B24BF3;
+
+  --text-main: #F5F1E3;
+  --text-muted: #C8C4DA;
+  --text-dim: #908BA6;
+  --border-color: #2DE2E6;
+
+  --font-pixel: 'Press Start 2P', monospace;
+  --font-body: 'Space Mono', monospace;
+  --font-retro: 'VT323', monospace;
+
+  --pixel-shadow: 4px 4px 0px #000000;
+  --pixel-shadow-sm: 2px 2px 0px #000000;
+  --pixel-border: 3px solid #2DE2E6;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+  background-color: var(--bg-main);
+  color: var(--text-main);
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  line-height: 1.6;
+  overflow-x: hidden;
+  position: relative;
+  min-height: 100vh;
+}
+
+/* Aksesibilitas Focus Visible (R-32) */
+:focus-visible {
+  outline: 3px solid var(--accent-coin) !important;
+  outline-offset: 3px !important;
+}
+
+/* CRT Screen Effect - Default Aktif tapi Bisa Dimatikan (F-14, R-34) */
+.crt-overlay {
+  pointer-events: none !important;
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: linear-gradient(
+    rgba(18, 16, 16, 0) 50%, 
+    rgba(0, 0, 0, 0.25) 50%
+  ), linear-gradient(
+    90deg,
+    rgba(255, 0, 0, 0.03),
+    rgba(0, 255, 0, 0.01),
+    rgba(0, 0, 255, 0.03)
+  );
+  background-size: 100% 3px, 6px 100%;
+  box-shadow: inset 0 0 80px rgba(0, 0, 0, 0.7);
+  transition: opacity 0.2s ease;
+}
+
+body.crt-off .crt-overlay {
+  display: none !important;
+}
+
+/* Reduced Motion (R-03, C-4) */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .crt-overlay {
+    display: none;
+  }
+}
+
+/* Layout Utilities */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+/* Retro Typography */
+.font-pixel {
+  font-family: var(--font-pixel);
+  letter-spacing: 0.5px;
+}
+
+.font-retro {
+  font-family: var(--font-retro);
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-pixel);
+  line-height: 1.4;
+  color: var(--text-main);
+  text-shadow: var(--pixel-shadow);
+}
+
+h1 { font-size: clamp(1.25rem, 4vw, 2.25rem); }
+h2 { font-size: clamp(1.1rem, 3vw, 1.75rem); }
+h3 { font-size: clamp(0.9rem, 2vw, 1.25rem); }
+p { font-size: clamp(0.95rem, 1.5vw, 1.05rem); }
+
+/* Pixel Buttons (R-08, R-26) */
+.btn-pixel {
+  font-family: var(--font-pixel);
+  font-size: 0.75rem;
+  padding: 0.85rem 1.4rem;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  cursor: pointer;
+  border: 3px solid #000;
+  box-shadow: 4px 4px 0px #000;
+  text-transform: uppercase;
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+  user-select: none;
+}
+
+button:disabled, .btn-pixel:disabled {
+  opacity: 0.45 !important;
+  cursor: not-allowed !important;
+  transform: none !important;
+  box-shadow: 2px 2px 0px #000 !important;
+  pointer-events: auto; /* Agar interaksi klik pembuka petunjuk bisa ditangkap */
+}
+
+.pulse-btn {
+  animation: pulse-glow 1.5s infinite alternate;
+}
+
+@keyframes pulse-glow {
+  from { box-shadow: 4px 4px 0px #000, 0 0 5px var(--accent-coin); }
+  to { box-shadow: 4px 4px 0px #000, 0 0 18px var(--accent-coin); }
+}
+
+.btn-pixel:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0px #000;
+}
+
+.btn-pixel:active {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0px #000;
+}
+
+.btn-coin {
+  background-color: var(--accent-coin);
+  color: #000;
+  border-color: #000;
+}
+
+.btn-cyan {
+  background-color: var(--accent-cyan);
+  color: #000;
+  border-color: #000;
+}
+
+.btn-red {
+  background-color: var(--accent-red);
+  color: #FFF;
+  border-color: #000;
+}
+
+.btn-dark {
+  background-color: var(--bg-panel);
+  color: var(--text-main);
+  border-color: var(--accent-cyan);
+}
+
+/* Badges */
+.badge-retro {
+  font-family: var(--font-pixel);
+  font-size: 0.65rem;
+  padding: 0.35rem 0.65rem;
+  border: 2px solid currentColor;
+  box-shadow: 2px 2px 0px #000;
+  display: inline-block;
+  text-transform: uppercase;
+}
+
+.badge-coin { color: var(--accent-coin); }
+.badge-green { color: var(--accent-green); }
+.badge-cyan { color: var(--accent-cyan); }
+.badge-red { color: var(--accent-red); }
+
+/* Sticky Navbar / HUD */
+.hud-nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: rgba(11, 11, 30, 0.95);
+  border-bottom: 3px solid var(--accent-cyan);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(4px);
+}
+
+.hud-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 1.25rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.hud-logo {
+  font-family: var(--font-pixel);
+  font-size: 1rem;
+  color: var(--accent-coin);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.hud-logo .tag {
+  font-size: 0.55rem;
+  background: var(--accent-red);
+  color: #fff;
+  padding: 2px 5px;
+  border-radius: 2px;
+}
+
+.hud-menu {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  list-style: none;
+}
+
+.hud-link {
+  font-family: var(--font-pixel);
+  font-size: 0.7rem;
+  color: var(--text-main);
+  text-decoration: none;
+  transition: color 0.15s ease;
+  padding: 0.4rem 0.2rem;
+}
+
+.hud-link:hover {
+  color: var(--accent-cyan);
+}
+
+.hud-wallet {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: var(--bg-panel-dark);
+  border: 2px solid var(--accent-coin);
+  padding: 0.35rem 0.75rem;
+  box-shadow: var(--pixel-shadow-sm);
+  font-family: var(--font-pixel);
+  font-size: 0.75rem;
+  color: var(--accent-coin);
+}
+
+.hud-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.hud-icon-btn {
+  background: var(--bg-panel-dark);
+  border: 2px solid var(--accent-cyan);
+  color: var(--text-main);
+  padding: 0.4rem 0.6rem;
+  font-family: var(--font-pixel);
+  font-size: 0.7rem;
+  cursor: pointer;
+  min-height: 44px;
+  min-width: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hud-icon-btn:hover {
+  background: var(--accent-cyan);
+  color: #000;
+}
+
+/* Hamburger Mobile Toggle */
+.mobile-toggle {
+  display: none;
+  background: transparent;
+  border: 2px solid var(--accent-cyan);
+  color: var(--accent-cyan);
+  padding: 0.5rem;
+  cursor: pointer;
+  min-width: 44px;
+  min-height: 44px;
+  font-family: var(--font-pixel);
+  font-size: 0.9rem;
+}
+
+/* Modal Frame (Digunakan untuk Lightbox & Dialog) */
+.retro-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  padding: 1rem;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease, visibility 0.2s ease;
+}
+
+.retro-modal-backdrop.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.retro-modal-box {
+  background: var(--bg-panel);
+  border: 4px solid var(--accent-cyan);
+  box-shadow: 8px 8px 0px #000;
+  max-width: 600px;
+  width: 100%;
+  padding: 1.5rem;
+  position: relative;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.retro-modal-close {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  background: var(--accent-red);
+  color: #fff;
+  border: 2px solid #000;
+  font-family: var(--font-pixel);
+  font-size: 0.75rem;
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Notification Toast */
+.retro-toast {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  background: var(--bg-panel-dark);
+  border: 3px solid var(--accent-coin);
+  padding: 1rem 1.25rem;
+  box-shadow: 6px 6px 0px #000;
+  font-family: var(--font-pixel);
+  font-size: 0.75rem;
+  color: var(--accent-coin);
+  z-index: 3000;
+  transform: translateY(120%);
+  transition: transform 0.25s ease;
+  max-width: 360px;
+}
+
+.retro-toast.show {
+  transform: translateY(0);
+}
+
+/* Mobile Nav Reflow (R-03) */
+@media (max-width: 860px) {
+  .mobile-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .hud-menu {
+    position: fixed;
+    top: 65px;
+    left: 0;
+    right: 0;
+    background: var(--bg-panel-dark);
+    border-bottom: 3px solid var(--accent-cyan);
+    flex-direction: column;
+    padding: 1.5rem;
+    gap: 1.25rem;
+    display: none;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.8);
+  }
+
+  .hud-menu.open {
+    display: flex;
+  }
+
+  .hud-wallet {
+    font-size: 0.7rem;
+    padding: 0.25rem 0.5rem;
+  }
+}

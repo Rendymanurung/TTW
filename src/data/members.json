@@ -1,0 +1,222 @@
+[
+  {
+    "id": 1,
+    "nama": "Rendy",
+    "panggilan": "Ren",
+    "julukan": "Kapten Deadline",
+    "kelas": "Tank / Strategist",
+    "quote": "Biar mepet, tugas kelar sebelum fajar terbit.",
+    "avatar_color": "#FF3B3B",
+    "avatar_symbol": "⚔️",
+    "fakta": "Punya alarm tiap 15 menit dan anti panik saat revisi dosen datang H-1 jam.",
+    "statistik": {
+      "begadang": 95,
+      "ngoding": 88,
+      "hoki": 82,
+      "tahan_banting": 98
+    },
+    "sosmed": {
+      "instagram": "rendy.ttw",
+      "github": "rendyttw"
+    },
+    "foto": "/members/rendy.png"
+  },
+  {
+    "id": 2,
+    "nama": "Affan",
+    "panggilan": "Affan",
+    "julukan": "Pixel Sorcerer",
+    "kelas": "Frontend Mage",
+    "quote": "Margin 1px meleset adalah kejahatan visual.",
+    "avatar_color": "#2DE2E6",
+    "avatar_symbol": "✨",
+    "fakta": "Bisa bedain hex color cuma dari lirikan mata 0.5 detik.",
+    "statistik": {
+      "begadang": 90,
+      "ngoding": 94,
+      "hoki": 75,
+      "tahan_banting": 80
+    },
+    "sosmed": {
+      "instagram": "affan.pixels",
+      "github": "affancode"
+    },
+    "foto": "/members/affan.png"
+  },
+  {
+    "id": 3,
+    "nama": "Michael",
+    "panggilan": "Mike",
+    "julukan": "Query Necromancer",
+    "kelas": "Backend Architect",
+    "quote": "Database aman, hidup tenang. Jangan sentuh port 5432.",
+    "avatar_color": "#FFD500",
+    "avatar_symbol": "⚡",
+    "fakta": "Menyelesaikan SQL query 200 baris dalam sekali duduk tanpa stack overflow.",
+    "statistik": {
+      "begadang": 92,
+      "ngoding": 96,
+      "hoki": 70,
+      "tahan_banting": 86
+    },
+    "sosmed": {
+      "instagram": "michael.queries",
+      "github": "michaeldb"
+    },
+    "foto": "/members/michael.png"
+  },
+  {
+    "id": 4,
+    "nama": "Deryal",
+    "panggilan": "Dery",
+    "julukan": "Bug Exorcist",
+    "kelas": "QA Specialist",
+    "quote": "Satu error lolos, sepuluh bug lain bakal pesta.",
+    "avatar_color": "#39FF14",
+    "avatar_symbol": "🔍",
+    "fakta": "Hobi ngirim screenshot edge-case aneh jam 3 pagi ke grup WhatsApp.",
+    "statistik": {
+      "begadang": 88,
+      "ngoding": 85,
+      "hoki": 80,
+      "tahan_banting": 90
+    },
+    "sosmed": {
+      "instagram": "deryal.tester",
+      "github": "deryaltester"
+    },
+    "foto": "/members/deryal.png"
+  },
+  {
+    "id": 5,
+    "nama": "Rekhi",
+    "panggilan": "Rekhi",
+    "julukan": "Coffee Alchemist",
+    "kelas": "Support / Logistics",
+    "quote": "Kafein adalah bahan bakar utama kelulusan tepat waktu.",
+    "avatar_color": "#FF8C00",
+    "avatar_symbol": "☕",
+    "fakta": "Hafal takaran kopi tubruk dan es teh jumbo terbaik di sekitar kampus.",
+    "statistik": {
+      "begadang": 99,
+      "ngoding": 78,
+      "hoki": 91,
+      "tahan_banting": 92
+    },
+    "sosmed": {
+      "instagram": "rekhi.brew",
+      "github": "rekhibrew"
+    },
+    "foto": "/members/rekhi.png"
+  },
+  {
+    "id": 6,
+    "nama": "Juan",
+    "panggilan": "Juan",
+    "julukan": "Sprint Runner",
+    "kelas": "Agile Rogue",
+    "quote": "Target hari ini harus centang hijau semua.",
+    "avatar_color": "#A020F0",
+    "avatar_symbol": "🏹",
+    "fakta": "Koleksi Trello board paling rapi dan selalu ngingetin daily standup.",
+    "statistik": {
+      "begadang": 84,
+      "ngoding": 86,
+      "hoki": 85,
+      "tahan_banting": 88
+    },
+    "sosmed": {
+      "instagram": "juan.scrum",
+      "github": "juanrunner"
+    },
+    "foto": "/members/juan.png"
+  },
+  {
+    "id": 7,
+    "nama": "Fakhri",
+    "panggilan": "Fakhri",
+    "julukan": "Docu Paladin",
+    "kelas": "Technical Writer",
+    "quote": "Kode tanpa dokumentasi bagai labirin tanpa obor.",
+    "avatar_color": "#00E5FF",
+    "avatar_symbol": "📜",
+    "fakta": "Bisa bikin laporan 40 halaman berformat IEEE rapi dalam waktu 4 jam.",
+    "statistik": {
+      "begadang": 80,
+      "ngoding": 82,
+      "hoki": 88,
+      "tahan_banting": 87
+    },
+    "sosmed": {
+      "instagram": "fakhri.writer",
+      "github": "fakhridocs"
+    },
+    "foto": "/members/fakhri.png"
+  },
+  {
+    "id": 8,
+    "nama": "Fadly",
+    "panggilan": "Fadly",
+    "julukan": "Data Oracle",
+    "kelas": "AI & Math Wizard",
+    "quote": "Bukan ramalan, ini probabilitas berbasis kalkulus.",
+    "avatar_color": "#E040FB",
+    "avatar_symbol": "🔮",
+    "fakta": "Bisa prediksi nilai IPK geng tiap semester dengan tingkat akurasi 98 persen.",
+    "statistik": {
+      "begadang": 86,
+      "ngoding": 92,
+      "hoki": 89,
+      "tahan_banting": 84
+    },
+    "sosmed": {
+      "instagram": "fadly.stats",
+      "github": "fadlioracle"
+    },
+    "foto": "/members/fadly.png"
+  },
+  {
+    "id": 9,
+    "nama": "Zulfikri",
+    "panggilan": "Zul",
+    "julukan": "Rebase Monk",
+    "kelas": "DevOps Guardian",
+    "quote": "Conflict merge diselesaikan dengan kepala dingin dan segelas teh.",
+    "avatar_color": "#76FF03",
+    "avatar_symbol": "🛡️",
+    "fakta": "Penyelamat branch master saat ada anggota yang salah ketik git push force.",
+    "statistik": {
+      "begadang": 89,
+      "ngoding": 90,
+      "hoki": 86,
+      "tahan_banting": 95
+    },
+    "sosmed": {
+      "instagram": "zulfikri.devops",
+      "github": "zulfikriops"
+    },
+    "foto": "/members/zulfikri.png"
+  },
+  {
+    "id": 10,
+    "nama": "Abid",
+    "panggilan": "Abid",
+    "julukan": "Clutch Finisher",
+    "kelas": "Secret Weapon",
+    "quote": "Menit 89? Waktu yang cukup untuk membalik keadaan.",
+    "avatar_color": "#FF1744",
+    "avatar_symbol": "💥",
+    "fakta": "Selalu muncul di detik terakhir saat presentasi proyek untuk kasih demo memukau.",
+    "statistik": {
+      "begadang": 94,
+      "ngoding": 91,
+      "hoki": 95,
+      "tahan_banting": 90
+    },
+    "sosmed": {
+      "instagram": "abid.clutch",
+      "github": "abidfinisher"
+    },
+    "foto": "/members/abid.png"
+  }
+]
