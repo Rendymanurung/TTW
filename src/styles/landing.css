@@ -133,29 +133,10 @@
   -webkit-backdrop-filter: blur(4px);
 }
 
-.hero-badge {
-  margin-bottom: 1.5rem;
-}
-
 .hero-title {
   color: var(--accent-coin);
-  margin-bottom: 1.25rem;
+  margin-bottom: 2rem;
   letter-spacing: 1px;
-}
-
-.hero-typewriter {
-  font-family: var(--font-retro);
-  font-size: clamp(1.4rem, 3.5vw, 2.2rem);
-  color: var(--accent-cyan);
-  min-height: 2.6rem;
-  margin-bottom: 1.5rem;
-}
-
-.hero-desc {
-  max-width: 650px;
-  margin: 0 auto 2.5rem;
-  color: var(--text-muted);
-  font-size: clamp(0.95rem, 1.8vw, 1.1rem);
 }
 
 .hero-actions {

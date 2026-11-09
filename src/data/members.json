@@ -45,28 +45,6 @@
   },
   {
     "id": 3,
-    "nama": "Michael",
-    "panggilan": "Mike",
-    "julukan": "Query Necromancer",
-    "kelas": "Backend Architect",
-    "quote": "Database aman, hidup tenang. Jangan sentuh port 5432.",
-    "avatar_color": "#FFD500",
-    "avatar_symbol": "⚡",
-    "fakta": "Menyelesaikan SQL query 200 baris dalam sekali duduk tanpa stack overflow.",
-    "statistik": {
-      "begadang": 92,
-      "ngoding": 96,
-      "hoki": 70,
-      "tahan_banting": 86
-    },
-    "sosmed": {
-      "instagram": "michael.queries",
-      "github": "michaeldb"
-    },
-    "foto": "/members/michael.png"
-  },
-  {
-    "id": 4,
     "nama": "Deryal",
     "panggilan": "Dery",
     "julukan": "Bug Exorcist",
@@ -86,6 +64,28 @@
       "github": "deryaltester"
     },
     "foto": "/members/deryal.png"
+  },
+  {
+    "id": 4,
+    "nama": "Michael",
+    "panggilan": "Mike",
+    "julukan": "Query Necromancer",
+    "kelas": "Backend Architect",
+    "quote": "Database aman, hidup tenang. Jangan sentuh port 5432.",
+    "avatar_color": "#FFD500",
+    "avatar_symbol": "⚡",
+    "fakta": "Menyelesaikan SQL query 200 baris dalam sekali duduk tanpa stack overflow.",
+    "statistik": {
+      "begadang": 92,
+      "ngoding": 96,
+      "hoki": 70,
+      "tahan_banting": 86
+    },
+    "sosmed": {
+      "instagram": "michael.queries",
+      "github": "michaeldb"
+    },
+    "foto": "/members/michael.png"
   },
   {
     "id": 5,
