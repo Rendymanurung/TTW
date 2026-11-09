@@ -41,6 +41,12 @@ export function MembersSection() {
           className="member-poster-img"
           loading="lazy"
         />
+        <img
+          src="/wooden_frame_portrait.png"
+          alt=""
+          className="member-frame-overlay"
+          aria-hidden="true"
+        />
       </div>
     </div>
   );

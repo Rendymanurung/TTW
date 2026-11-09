@@ -66,7 +66,7 @@ export function Footer({ onNavigate }) {
           💡 Petunjuk Rahasia: Masukkan kode Konami (Atas Atas Bawah Bawah Kiri Kanan Kiri Kanan B A) untuk bonus koin tersembunyi.
         </p>
         <p className="footer-copy">
-          &copy; 2026 TTW (Tamat Tepat Waktu). Koin fiktif untuk hiburan murni. Tanpa uang asli.
+          &copy; 2026 TTW (Tamat Tepat Waktu).
         </p>
       </div>
     </footer>

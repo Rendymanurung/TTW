@@ -39,15 +39,21 @@ export function MemberModal({ member, onClose }) {
 
         <div id="member-modal-content" className="member-detail-content">
           <div className="modal-anim-header">
-            <div
-              className="member-modal-avatar"
-              style={{
-                borderColor: member.avatar_color,
-                boxShadow: `0 0 20px ${member.avatar_color}66, 4px 4px 0 #000`
-              }}
-            >
+            <div className="member-modal-avatar-frame">
               {member.foto ? (
-                <img src={member.foto} alt={`Foto buronan ${member.nama}`} className="member-avatar-img" />
+                <>
+                  <img
+                    src={member.foto}
+                    alt={`Foto buronan ${member.nama}`}
+                    className="member-modal-poster-img"
+                  />
+                  <img
+                    src="/wooden_frame_portrait.png"
+                    alt=""
+                    className="member-modal-frame-overlay"
+                    aria-hidden="true"
+                  />
+                </>
               ) : (
                 member.avatar_symbol
               )}

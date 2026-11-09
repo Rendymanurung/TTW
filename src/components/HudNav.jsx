@@ -87,7 +87,16 @@ export function HudNav({ currentRoute, onNavigate }) {
           <a href="#gallery" className="hud-link" onClick={(e) => { e.preventDefault(); handleAnchorClick(e, '#gallery'); }}>
             GALERI
           </a>
-          <a href="#arcade-teaser" className="hud-link" onClick={(e) => { e.preventDefault(); handleAnchorClick(e, '#arcade-teaser'); }}>
+          <a
+            href="#arcade"
+            className="hud-link"
+            onClick={(e) => {
+              e.preventDefault();
+              setMenuOpen(false);
+              sound.playClick();
+              onNavigate('arcade');
+            }}
+          >
             ARCADE
           </a>
         </nav>

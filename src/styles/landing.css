@@ -1,5 +1,5 @@
 /* Landing Page CSS - TTW Retro Arcade
-   8 Section: Press Start, Hero, 10 Anggota, Timeline, Galeri, Teaser Arcade, Footer
+   7 Section: Press Start, Hero, 10 Anggota, Timeline, Galeri, Footer
 */
 
 /* 1. Layar Start Overlay (F-04) */
@@ -320,33 +320,30 @@
   width: 100%;
   max-width: 255px;
   padding: 0;
-  border-color: var(--accent-coin);
-  box-shadow: 7px 7px 0px #000;
+  background: transparent;
+  border: none;
+  box-shadow: none;
 }
 
 .member-card {
-  background: var(--bg-panel);
-  border: 3px solid var(--accent-cyan);
-  box-shadow: 6px 6px 0px #000;
+  background: transparent;
+  border: none;
+  box-shadow: none;
   padding: 0;
   text-align: center;
   cursor: pointer;
-  transition: transform 0.18s cubic-bezier(0.175, 0.885, 0.32, 1.275), border-color 0.18s ease, box-shadow 0.18s ease;
+  transition: transform 0.18s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   position: relative;
   display: flex;
   flex-direction: column;
-  overflow: hidden;
 }
 
 .member-card:hover {
-  transform: translateY(-6px);
-  border-color: var(--accent-coin);
-  box-shadow: 8px 8px 0px #000;
+  transform: translateY(-8px) scale(1.03);
 }
 
 .member-card:active {
-  transform: translateY(2px) scale(0.98);
-  box-shadow: 2px 2px 0px #000;
+  transform: translateY(2px) scale(0.97);
 }
 
 .member-card.is-clicked {
@@ -356,49 +353,53 @@
 @keyframes card-click-burst {
   0% {
     transform: scale(0.95);
-    border-color: #fff;
-    box-shadow: 0 0 25px var(--accent-coin), inset 0 0 15px rgba(255, 213, 0, 0.5);
+    filter: brightness(1.2);
   }
   50% {
-    transform: scale(1.05) translateY(-8px);
-    border-color: var(--accent-coin);
-    box-shadow: 0 0 35px var(--accent-coin), 0 0 15px var(--accent-cyan);
+    transform: scale(1.06) translateY(-8px);
+    filter: brightness(1.4) drop-shadow(0 0 20px #ffd500);
   }
   100% {
     transform: scale(1);
-    box-shadow: 6px 6px 0px #000;
+    filter: drop-shadow(5px 5px 0px #000);
   }
 }
 
 .member-poster-frame {
+  position: relative;
   width: 100%;
-  aspect-ratio: 687 / 1024;
-  overflow: hidden;
-  background: #140d28;
+  aspect-ratio: 1037 / 1280;
   display: flex;
   align-items: center;
   justify-content: center;
+  filter: drop-shadow(5px 5px 0px #000);
+  transition: filter 0.18s ease;
+}
+
+.member-card:hover .member-poster-frame {
+  filter: drop-shadow(7px 9px 0px #000) drop-shadow(0 0 16px rgba(255, 213, 0, 0.45));
 }
 
 .member-poster-img {
-  width: 100%;
-  height: 100%;
+  position: absolute;
+  top: 10%;
+  left: 16.88%;
+  width: 66.24%;
+  height: 80%;
   object-fit: cover;
   object-position: center;
   display: block;
-  transition: transform 0.25s ease;
+  background: #140d28;
 }
 
-.member-card:hover .member-poster-img {
-  transform: scale(1.04);
-}
-
-.member-avatar-img {
+.member-frame-overlay {
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  object-position: center top;
-  display: block;
+  pointer-events: none;
+  image-rendering: pixelated;
+  user-select: none;
 }
 
 /* MEMBER DETAIL MODAL OPEN ANIMATION (Fade-zoom, slide-in, and stat sweeps) */
@@ -457,18 +458,37 @@
   }
 }
 
-.member-modal-avatar {
+.member-modal-avatar-frame {
   width: 150px;
-  height: 200px;
+  aspect-ratio: 1037 / 1280;
   margin: 0 auto 0.75rem;
-  background: #0f0d26;
-  border: 4px solid var(--accent-coin);
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
-  box-shadow: 4px 4px 0px #000;
+  filter: drop-shadow(4px 4px 0px #000);
   animation: modal-avatar-bounce 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.1s backwards;
+}
+
+.member-modal-poster-img {
+  position: absolute;
+  top: 10%;
+  left: 16.88%;
+  width: 66.24%;
+  height: 80%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.member-modal-frame-overlay {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  image-rendering: pixelated;
+  user-select: none;
 }
 
 @keyframes modal-avatar-bounce {
@@ -747,51 +767,7 @@
   color: var(--accent-coin);
 }
 
-/* 7. Teaser Arcade Section */
-.arcade-teaser-section {
-  padding: 5rem 0;
-  text-align: center;
-}
-
-.cabinet-teaser {
-  max-width: 600px;
-  margin: 0 auto;
-  background: var(--bg-panel);
-  border: 6px solid var(--accent-coin);
-  box-shadow: 10px 10px 0px #000;
-  padding: 2.5rem 1.5rem;
-}
-
-.mini-slot-screen {
-  background: #000;
-  border: 4px solid var(--accent-cyan);
-  padding: 1.5rem;
-  display: flex;
-  justify-content: center;
-  gap: 1.5rem;
-  margin: 2rem 0;
-}
-
-.mini-reel {
-  width: 70px;
-  height: 80px;
-  background: #111;
-  border: 3px solid var(--accent-coin);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 2.2rem;
-  box-shadow: inset 0 0 10px rgba(0,0,0,0.8);
-}
-
-.teaser-reward {
-  color: var(--accent-green);
-  font-family: var(--font-pixel);
-  font-size: 0.85rem;
-  margin-bottom: 1.5rem;
-}
-
-/* 8. Footer Section */
+/* 7. Footer Section */
 .site-footer {
   background: var(--bg-panel-dark);
   border-top: 3px solid var(--accent-cyan);
@@ -917,15 +893,5 @@
     padding: 0;
     max-width: 260px;
     margin: 0 auto;
-  }
-
-  .mini-slot-screen {
-    gap: 0.75rem;
-  }
-
-  .mini-reel {
-    width: 55px;
-    height: 65px;
-    font-size: 1.8rem;
   }
 }
