@@ -42,7 +42,7 @@ export function MembersSection() {
           loading="lazy"
         />
         <img
-          src="/wooden_frame_portrait.png"
+          src="/fighter_frame.png"
           alt=""
           className="member-frame-overlay"
           aria-hidden="true"

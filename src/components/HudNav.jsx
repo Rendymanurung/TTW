@@ -63,8 +63,7 @@ export function HudNav({ currentRoute, onNavigate }) {
           aria-label="TTW Beranda"
           onClick={(e) => { e.preventDefault(); handleAnchorClick(e, '#hero'); }}
         >
-          <span>👑 TTW</span>
-          <span className="tag">STAGE 1</span>
+          <span>TTW</span>
         </a>
 
         <button

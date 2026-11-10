@@ -48,7 +48,7 @@ export function MemberModal({ member, onClose }) {
                     className="member-modal-poster-img"
                   />
                   <img
-                    src="/wooden_frame_portrait.png"
+                    src="/fighter_frame.png"
                     alt=""
                     className="member-modal-frame-overlay"
                     aria-hidden="true"
